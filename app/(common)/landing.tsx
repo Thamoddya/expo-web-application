@@ -2,7 +2,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Landing() {
+export default function landing() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Welcome to the Landing Page!</Text>

@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import { router } from "expo-router";
 import { ArrowCircleUp } from "iconsax-react";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
@@ -47,8 +48,14 @@ function NavBar() {
             <Nav.Link className="fw-bold" href="#ads-center">
               Support
             </Nav.Link>
+            <Nav.Link
+              onClick={() => router.push("./users/1")}
+              className="fw-bold"
+            >
+              User Page
+            </Nav.Link>
             {/* Custom Styled Button */}
-            <Nav.Link href="#be-a-bear">
+            <Nav.Link href="/login">
               <div
                 style={{
                   display: "flex",
@@ -176,7 +183,9 @@ const Index = () => {
           {/* Get Offers Button */}
           <Button
             mode="contained"
-            onPress={() => console.log("Get Offers")}
+            onPress={() => {
+              router.push("./landing/landing");
+            }}
             style={[
               styles.button,
               {
